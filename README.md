@@ -8,6 +8,6 @@ If you want to learn more about Quarkus, please visit its website: https://quark
 
 Refer to the README.md in the soap-service project
 
-## Running the SOAP Service
+## Running the SOAP Client
 
 Refer to the README.md in the soap-client project

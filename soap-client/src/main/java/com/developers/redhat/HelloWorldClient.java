@@ -1,15 +1,17 @@
 package com.developers.redhat;
 
-import javax.xml.ws.WebServiceRef;
+import javax.enterprise.context.ApplicationScoped;
+import org.apache.cxf.frontend.ClientProxyFactoryBean;
 
+@ApplicationScoped
 public class HelloWorldClient {
 
-    @WebServiceRef(wsdlLocation =
-      "http://localhost:9005/helloworld?wsdl")
-    private static HelloWorld service;
-
-    public void callHelloWorld() {
-        System.out.println("Result:" + service.sayHi("Nikhil is testing here"));
+    public String sayHi(String text) {
+      ClientProxyFactoryBean factory = new ClientProxyFactoryBean();
+      factory.setServiceClass(HelloWorld.class);
+      factory.setAddress("http://localhost:8082/helloworld");
+      HelloWorld client = (HelloWorld) factory.create();
+      return client.sayHi(text);
     }
     
 }

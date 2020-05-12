@@ -1,4 +1,4 @@
-# Quarkus SOAP project
+# SOAP service and client in Quarkus application
 
 This project uses Quarkus, the Supersonic Subatomic Java Framework.
 

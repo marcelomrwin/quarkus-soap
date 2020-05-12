@@ -10,8 +10,8 @@ For more details on CXF, visit its website: https://cxf.apache.org/
 
 ## Running the SOAP Service
 
-Refer to the README.md in the soap-service project
+Refer to the [README.md](soap-service/README.md) in the soap-service project
 
 ## Running the SOAP Client
 
-Refer to the README.md in the soap-client project
+Refer to the [README.md](soap-client/README.md) in the soap-client project

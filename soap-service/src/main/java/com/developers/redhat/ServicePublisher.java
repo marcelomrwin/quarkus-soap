@@ -10,13 +10,13 @@ public class ServicePublisher {
     
     void onStart(@Observes StartupEvent ev) {
         // Create our service implementation
-        HelloWorldImpl helloWorldImpl = new HelloWorldImpl();
+        HelloWorld helloWorld = new HelloWorldImpl();
         
         // Create our Server
         ServerFactoryBean svrFactory = new ServerFactoryBean();
         svrFactory.setServiceClass(HelloWorld.class);
         svrFactory.setAddress("http://localhost:8082/helloworld");
-        svrFactory.setServiceBean(helloWorldImpl);
+        svrFactory.setServiceBean(helloWorld);
         svrFactory.create();
     }
 }
